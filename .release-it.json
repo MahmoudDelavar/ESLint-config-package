@@ -7,8 +7,7 @@
     "release": true
   },
   "npm": {
-    "skipChecks": true,
-    "publishPath": "dist"
+    "skipChecks": true
   },
   "hooks": {
     "before:init": "pnpm build"

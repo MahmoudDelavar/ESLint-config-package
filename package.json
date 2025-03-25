@@ -1,6 +1,6 @@
 {
-  "name": "my-eslint-package",
-  "version": "1.0.2-2",
+  "name": "@my-eslint-config",
+  "version": "1.0.2-6",
   "description": "",
   "main": "index.js",
   "exports": {
