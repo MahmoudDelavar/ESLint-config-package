@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "spell-check": "cspell lint \"**\" ",
+    "type-check": "tsc",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "Mahmoud Delavar",
   "license": "ISC",
   "packageManager": "pnpm@10.6.5",
   "devDependencies": {
+    "cspell": "^8.17.5",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0"

@@ -1,0 +1,4 @@
+{
+  "language": "en",
+  "ignorePaths": ["pnpm-lock.yaml", "node_modules", "package.json"]
+}
