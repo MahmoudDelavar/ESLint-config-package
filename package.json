@@ -1,8 +1,11 @@
 {
   "name": "my-eslint-package",
-  "version": "1.0.2-0",
+  "version": "1.0.2-1",
   "description": "",
   "main": "index.js",
+  "exports":{
+    ".":"./index"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "spell-check": "cspell lint \"**\" ",
