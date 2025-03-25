@@ -1,5 +1,5 @@
 {
-  "name": "ESLint-config-package",
+  "name": "my-eslint-package",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,16 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "spell-check": "cspell lint \"**\" ",
     "type-check": "tsc",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "release": "release-it"
   },
   "keywords": [],
   "author": "Mahmoud Delavar",
   "license": "ISC",
   "packageManager": "pnpm@10.6.5",
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
     "cspell": "^8.17.5",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-import": "^2.31.0"
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^16.0.0",
+    "release-it": "^18.1.2",
+    "typescript-eslint": "^8.28.0"
   }
 }
