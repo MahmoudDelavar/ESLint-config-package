@@ -1,1 +1,0 @@
-export { testRule } from './testRule';

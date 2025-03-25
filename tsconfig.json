@@ -1,0 +1,14 @@
+{
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "strict": true,
+    "noEmit": true,
+    "stripInternal": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  }
+}

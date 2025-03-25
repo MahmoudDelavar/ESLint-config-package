@@ -5,5 +5,12 @@
   },
   "github": {
     "release": true
+  },
+  "npm": {
+    "skipChecks": true,
+    "publishPath": "dist"
+  },
+  "hooks": {
+    "before:init": "pnpm build"
   }
 }
