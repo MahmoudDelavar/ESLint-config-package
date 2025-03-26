@@ -2,6 +2,7 @@ import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
+import { initialConfig } from './dist';
 
 export default defineConfig([
   {
@@ -15,6 +16,7 @@ export default defineConfig([
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
+      ...initialConfig(),
     },
   },
 ]);

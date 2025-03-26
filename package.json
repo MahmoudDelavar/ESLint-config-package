@@ -43,6 +43,8 @@
   },
   "dependencies": {
     "eslint-plugin-functional": "^9.0.1",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "my-eslint-package": "link:"
   }
 }
