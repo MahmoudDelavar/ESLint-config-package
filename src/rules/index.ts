@@ -1,0 +1,1 @@
+export { nextJsRules } from './nextjsRules';

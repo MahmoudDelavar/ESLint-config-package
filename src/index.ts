@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
-import { testRule } from './rules/testRule';
+import { nextJsRules } from './rules';
 
 export const initialConfig = () => {
-  const config = [...testRule] satisfies Linter.Config[];
+  const config = [...nextJsRules] satisfies Linter.Config[];
   return config;
 };

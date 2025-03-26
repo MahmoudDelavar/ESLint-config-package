@@ -1,6 +1,6 @@
 {
   "name": "mdp-eslint-config",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A custom ESLint configuration package",
   "main": "dist/index.js",
   "exports": {
@@ -24,10 +24,12 @@
   "packageManager": "pnpm@10.6.5",
   "devDependencies": {
     "@eslint/js": "^9.23.0",
+    "@next/eslint-plugin-next": "^15.2.4",
     "cspell": "^8.17.5",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-next": "^0.0.0",
     "globals": "^16.0.0",
     "release-it": "^18.1.2",
     "tsup": "^8.4.0",
