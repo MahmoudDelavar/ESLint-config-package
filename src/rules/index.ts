@@ -1,1 +1,3 @@
-export { nextJsRules } from './nextjsRules';
+export { nextJsRules } from './nextJsRules';
+export { reactRules } from './reactJsRules';
+export { fpRules } from './functionalProgrammingRules';

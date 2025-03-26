@@ -1,8 +1,11 @@
 import type { Linter } from 'eslint';
-import { nextJsRules } from './rules';
-import { reactRules } from './rules/reactJsRules';
+import { nextJsRules, fpRules, reactRules } from './rules';
 
 export const initialConfig = () => {
-  const config = [...nextJsRules, ...reactRules] satisfies Linter.Config[];
+  const config = [
+    ...nextJsRules,
+    ...reactRules,
+    ...fpRules,
+  ] satisfies Linter.Config[];
   return config;
 };
