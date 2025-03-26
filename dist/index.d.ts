@@ -1,4 +1,6 @@
-declare const initialConfig: () => {
+import { Linter } from 'eslint';
+
+declare const initialConfig: () => (Linter.Config<Linter.RulesRecord> | {
     rules: {
         'next/google-font-display': "error";
         'next/google-font-preconnect': "error";
@@ -21,6 +23,6 @@ declare const initialConfig: () => {
         'next/no-typos': "error";
         'next/no-unwanted-polyfillio': "error";
     };
-}[];
+})[];
 
 export { initialConfig };
