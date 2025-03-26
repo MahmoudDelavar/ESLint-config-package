@@ -1,5 +1,5 @@
 {
-  "name": "my-eslint-config",
+  "name": "mdp-eslint-config",
   "version": "1.1.0",
   "description": "A custom ESLint configuration package",
   "main": "dist/index.js",
@@ -7,14 +7,18 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "spell-check": "cspell lint \"**\"",
     "type-check": "tsc",
     "lint": "eslint ./src",
     "release": "release-it",
     "build": "tsup src/index.ts --format esm,cjs --dts"
   },
-  "keywords": ["eslint", "config", "typescript"],
+  "keywords": [
+    "eslint",
+    "config",
+    "typescript"
+  ],
   "author": "Mahmoud Delavar",
   "license": "ISC",
   "packageManager": "pnpm@10.6.5",
