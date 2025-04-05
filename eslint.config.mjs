@@ -1,22 +1,32 @@
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import { initialConfig } from './dist';
+import parser from '@typescript-eslint/parser';
+import tsPlugin from '@typescript-eslint/eslint-plugin';
+import { initializeConfig } from './dist/index.mjs';
 
-export default defineConfig([
+const baseConfig = initializeConfig({
+  enableReact: false,
+  enableTypescript: true,
+  typescriptOptions: {
+    tsconfigRootDir: import.meta.dirname,
+  },
+});
+
+export default [
   {
-    files: ['**/*.{js,mjs,cjs,ts}'],
-    languageOptions: { globals: globals.browser },
-    plugins: {
-      js,
-      '@typescript-eslint': tseslint,
+    files: ['src/**/*.ts', 'src/**/*.tsx'],
+    languageOptions: {
+      parser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        project: './tsconfig.json',
+      },
     },
-    extends: ['js/recommended', 'plugin:@typescript-eslint/recommended'],
+    plugins: {
+      '@typescript-eslint': tsPlugin,
+    },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      ...initialConfig(),
+      ...tsPlugin.configs.recommended.rules,
     },
   },
-]);
+  ...baseConfig,
+];
