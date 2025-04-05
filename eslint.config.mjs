@@ -4,10 +4,6 @@ import { initializeConfig } from './dist/index.mjs';
 
 const baseConfig = initializeConfig({
   enableReact: false,
-  enableTypescript: true,
-  typescriptOptions: {
-    tsconfigRootDir: import.meta.dirname,
-  },
 });
 
 export default [

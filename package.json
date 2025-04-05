@@ -1,6 +1,6 @@
 {
   "name": "mdp-eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.1-0",
   "description": "A custom ESLint configuration package",
   "main": "dist/index.js",
   "exports": {
@@ -11,6 +11,7 @@
     "spell-check": "cspell lint \"**\"",
     "type-check": "tsc",
     "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "release": "release-it",
     "build": "tsup"
   },
