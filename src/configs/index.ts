@@ -1,0 +1,1 @@
+export { getReactConfig } from './getReactConfig';

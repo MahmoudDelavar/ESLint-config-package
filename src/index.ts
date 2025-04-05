@@ -1,12 +1,19 @@
 import type { Linter } from 'eslint';
-import { nextJsRules, fpRules, reactRules, basicRules } from './rules';
+import { IGNORE_PATHS } from './global';
+import { getReactConfig } from './configs';
 
-export const initialConfig = () => {
+export type LinterSetting = {
+  enableReact: boolean;
+  ignorePaths?: string[];
+};
+
+export const initializeConfig = (settings: LinterSetting) => {
   const config = [
-    ...nextJsRules,
-    ...reactRules,
-    ...fpRules,
-    ...basicRules,
+    ...(settings.enableReact ? getReactConfig() : []),
+    {
+      ignores: [...(settings?.ignorePaths ?? []), ...IGNORE_PATHS],
+    },
   ] satisfies Linter.Config[];
+
   return config;
 };
