@@ -13,8 +13,8 @@ export default [
       parser,
       parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module',
         project: './tsconfig.json',
+        sourceType: 'module',
       },
     },
     plugins: {
