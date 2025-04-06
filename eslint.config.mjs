@@ -1,5 +1,5 @@
-import parser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
+const tsPlugin = await import('@typescript-eslint/eslint-plugin');
+const parser = await import('@typescript-eslint/parser');
 import { initializeConfig } from './dist/index.mjs';
 
 const baseConfig = initializeConfig({
