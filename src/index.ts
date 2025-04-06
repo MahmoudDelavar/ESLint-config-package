@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint';
 import { IGNORE_PATHS } from './global';
-import { getBaseConfig, getReactConfig } from './configs';
+import { getBaseConfig, getReactConfig, getTypescriptConfig } from './configs';
 
 export type LinterSettings = {
   disableHeavyRules: boolean;
@@ -8,12 +8,16 @@ export type LinterSettings = {
   enableTypescript: boolean;
   ignorePaths?: string[];
   projectPathAliasRegex: string;
+  typescriptOptions: {
+    tsconfigRootDir: string;
+  };
 };
 
 export const initializeConfig = (settings: LinterSettings) => {
   const config = [
     ...getBaseConfig(settings),
     ...(settings.enableReact ? getReactConfig() : []),
+    ...(settings.enableTypescript ? getTypescriptConfig(settings) : []),
 
     {
       ignores: [...(settings?.ignorePaths ?? []), ...IGNORE_PATHS],

@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "spell-check": "cspell lint \"**\"",
     "type-check": "tsc",
-    "lint": "eslint ./src",
+    "lint": "eslint --format stylish ./src",
     "lint:fix": "eslint ./src --fix",
     "release": "release-it",
     "build": "tsup"
@@ -63,8 +63,10 @@
     "cspell": "8.15.4",
     "eslint-import-resolver-typescript": "3.6.3",
     "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.30.0",
     "release-it": "17.10.0",
     "release-it-pnpm": "4.6.3",
-    "tsup": "^8.4.0"
+    "tsup": "^8.4.0",
+    "typescript": "5.6"
   }
 }

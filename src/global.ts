@@ -22,3 +22,6 @@ export const IGNORE_PATHS = [
   '**/__snapshots__',
   '!.storybook',
 ];
+export const TS_GLOBS = '**/*.?([cm])ts';
+
+export const TSX_GLOBS = '**/*.?([cm])tsx';
