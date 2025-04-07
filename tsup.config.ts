@@ -1,13 +1,13 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts'],
-  outDir: 'dist',
   clean: true,
-  format: ['esm', 'cjs'],
-  target: ['es2022', 'node18'],
   dts: true,
+  entry: ['src/index.ts'],
+  format: ['esm', 'cjs'],
   minify: true,
+  outDir: 'dist',
   sourcemap: false,
   splitting: true,
+  target: ['es2022', 'node18'],
 });
