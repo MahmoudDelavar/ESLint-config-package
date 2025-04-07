@@ -3,6 +3,7 @@ import { IGNORE_PATHS } from './global';
 import {
   getBaseConfig,
   getNextJsConfig,
+  getPrettierConfig,
   getReactConfig,
   getTypescriptConfig,
 } from './configs';
@@ -10,6 +11,7 @@ import {
 export type LinterSettings = {
   disableHeavyRules: boolean;
   enableNextJs: boolean;
+  enablePrettier: boolean;
   enableReact: boolean;
   enableTypescript: boolean;
   ignorePaths?: string[];
@@ -25,6 +27,7 @@ export const initializeConfig = (settings: LinterSettings) => {
     ...(settings.enableReact ? getReactConfig() : []),
     ...(settings.enableTypescript ? getTypescriptConfig(settings) : []),
     ...(settings.enableNextJs ? getNextJsConfig() : []),
+    ...(settings.enablePrettier ? getPrettierConfig() : []),
 
     {
       ignores: [...(settings?.ignorePaths ?? []), ...IGNORE_PATHS],
