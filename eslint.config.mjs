@@ -5,6 +5,7 @@ const baseConfig = initializeConfig({
   enableNextJs: false,
   enablePrettier: false,
   enableReact: false,
+  enableTailwind: false,
   enableTypescript: true,
   projectPathAliasRegex: '',
   typescriptOptions: {
