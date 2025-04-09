@@ -4,7 +4,7 @@ export default defineConfig({
   clean: true,
   dts: true,
   entry: ['src/index.ts'],
-  external: ['./worker'],
+  external: ['./worker', 'eslint-plugin-tailwindcss'],
   format: ['esm', 'cjs'],
   minify: true,
   outDir: 'dist',
