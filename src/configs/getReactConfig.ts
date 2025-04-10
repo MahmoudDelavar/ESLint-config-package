@@ -1,6 +1,7 @@
-import type { Linter } from 'eslint'
-import a11yPlugin from 'eslint-plugin-jsx-a11y'
-import reactPlugin from '@eslint-react/eslint-plugin'
+import type { Linter } from 'eslint';
+import a11yPlugin from 'eslint-plugin-jsx-a11y';
+import reactPlugin from '@eslint-react/eslint-plugin';
+
 export const getReactConfig = () =>
   [
     reactPlugin.configs.all,
@@ -24,4 +25,4 @@ export const getReactConfig = () =>
         },
       },
     },
-  ] as Linter.Config[]
+  ] as Linter.Config[];

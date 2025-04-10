@@ -5,6 +5,7 @@ import {
   getNextJsConfig,
   getPrettierConfig,
   getReactConfig,
+  getStylisticConfig,
   getTailwindConfig,
   getTypescriptConfig,
 } from './configs';
@@ -14,6 +15,7 @@ export type LinterSettings = {
   enableNextJs: boolean;
   enablePrettier: boolean;
   enableReact: boolean;
+  enableStylistic: boolean;
   enableTailwind: boolean;
   enableTypescript: boolean;
   ignorePaths?: string[];
@@ -31,6 +33,7 @@ export const initializeConfig = (settings: LinterSettings) => {
     ...(settings.enableNextJs ? getNextJsConfig() : []),
     ...(settings.enablePrettier ? getPrettierConfig() : []),
     ...(settings.enableTailwind ? getTailwindConfig() : []),
+    ...(settings.enableStylistic ? getStylisticConfig(settings) : []),
     {
       ignores: [...(settings?.ignorePaths ?? []), ...IGNORE_PATHS],
     },
