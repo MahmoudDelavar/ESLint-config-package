@@ -2,10 +2,7 @@
   "name": "mdp-eslint-config",
   "version": "2.5.1-2",
   "description": "A custom ESLint configuration package",
-  "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -14,6 +11,8 @@
       "require": "./dist/index.cjs"
     }
   },
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "spell-check": "cspell lint \"**\"",
@@ -80,8 +79,5 @@
     "release-it-pnpm": "4.6.3",
     "tsup": "^8.4.0",
     "typescript": "5.6"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
