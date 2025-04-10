@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "gitlab.gitlab-workflow",
+    "dbaeumer.vscode-eslint"
+  ]
+}
