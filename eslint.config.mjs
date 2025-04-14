@@ -5,6 +5,7 @@ const baseConfig = initializeConfig({
   enableNextJs: false,
   enablePrettier: false,
   enableReact: false,
+  enableStorybook: false,
   enableStylistic: true,
   enableTailwind: false,
   enableTypescript: true,
