@@ -5,6 +5,7 @@ import {
   getNextJsConfig,
   getPrettierConfig,
   getReactConfig,
+  getStorybookConfig,
   getStylisticConfig,
   getTailwindConfig,
   getTypescriptConfig,
@@ -15,6 +16,7 @@ export type LinterSettings = {
   enableNextJs: boolean;
   enablePrettier: boolean;
   enableReact: boolean;
+  enableStorybook: boolean;
   enableStylistic: boolean;
   enableTailwind: boolean;
   enableTypescript: boolean;
@@ -34,6 +36,7 @@ export const initializeConfig = (settings: LinterSettings) => {
     ...(settings.enablePrettier ? getPrettierConfig() : []),
     ...(settings.enableTailwind ? getTailwindConfig() : []),
     ...(settings.enableStylistic ? getStylisticConfig(settings) : []),
+    ...(settings.enableStorybook ? getStorybookConfig() : []),
     {
       ignores: [...(settings?.ignorePaths ?? []), ...IGNORE_PATHS],
     },
